@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bash stop.sh
+#bash stop.sh
 git submodule foreach git pull origin master
 sudo pip3 install  mysql-connector-python
 

@@ -30,7 +30,7 @@ $(MONNITOR) : %.o : %.c
 	$(CC) -c  $< -o $@  -Wall
 
 install:
-	bash ./stop.sh
+	#bash ./stop.sh
 	sudo cp -v stran /usr/bin/
 	sudo cp -v stop.sh /usr/bin/stoptran
 	sudo cp -v mstran /usr/bin/

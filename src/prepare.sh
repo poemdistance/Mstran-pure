@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#bash stop.sh
-git submodule foreach git pull origin master
-sudo pip3 install  mysql-connector-python
-
 #复制文件到家目录
 storage="$HOME/.stran"
 currFile=("../gif_pic/background.jpg" "../gif_pic/tran.png" "../gif_pic/Switch.png" 
@@ -67,19 +63,7 @@ echo
 echo 'Preparing to install submodules'
 echo
 
-cd ../baidu-translate
-sudo pip3 install -r requirements.txt
-sudo ./setup.py install
-
-cd ../google-translate
-sudo pip3 install -r requirements.txt
-sudo ./setup.py install
-sudo pip3 install  mysql-connector-python
-
 system=`uname -a`
 if [[ $system =~ .*"deepin".* ]]; then
     sudo apt install gnome-screenshot
-else
-    cd ../gnome-screenshot
-    sudo bash install.sh
 fi
